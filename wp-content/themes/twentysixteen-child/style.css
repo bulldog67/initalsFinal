@@ -8,7 +8,10 @@ Template: twentysixteen
 Version: 0.1.0
 */
 
+.type-post .entry-title, .type-page .entry-title {
+  font-size: 1.5rem;
+}
 
-
-
-
+.post-meta {
+display: none;
+}
