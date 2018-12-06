@@ -1,0 +1,34 @@
+@import "variables";
+@import "functions";
+
+/* Customizer Styles */
+li#accordion-section-sixteen_sec_pro h3:before {
+  content: "";
+  background-image: url('../images/i.png');
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 2px;
+  left: 1px;
+  display: inline-block;
+  background-size: cover;
+}
+
+/* ----------------
+Important Links
+ -----------------*/
+.sixteen-important-links{
+  background: @accent;
+  padding: 5px 10px;
+  color: #FFF !important;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  line-height: 1.2;
+  box-shadow: none;
+  font-style: normal;
+  text-decoration: none;
+}
+.sixteen-important-links:hover{
+  background: darken(@accent, 15%);
+}

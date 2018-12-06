@@ -1,0 +1,26 @@
+#footer-sidebar {
+  clear: both;
+  .footer-column {
+    width: 30%;
+    float: left;
+    margin: 1.5%;
+    @media screen and (max-width: 767px){
+      margin: 0px;
+    }
+  }
+}
+#colophon {
+  background: @menu-bg;
+  color: desaturate(@menu-link-color, 10%);
+  padding: 10px;
+  a {
+    text-decoration: none;
+    color: desaturate(@link-color, 10%);
+  }
+  .site-info {
+    float: left;
+  }
+  #footertext {
+    float: right;
+  }
+}

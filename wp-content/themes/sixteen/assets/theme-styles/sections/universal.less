@@ -1,0 +1,546 @@
+/*Homepage
+--------------------------------------------------*/
+h2#page-title, .archive h1.page-title, .page h1.entry-title {
+  font-size: x-large;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  display: inline-block;
+  clear: both;
+  text-transform: uppercase;
+  text-shadow: #fff 1px 0px 1px;
+  padding: 10px 20px;
+  &:first-letter {
+    font-size: xx-large;
+    text-shadow: #fff 2px 0px 1px;
+  }
+  color: @article-bg;
+  box-shadow: #444 0px 15px 25px -17px black ;
+  border-bottom: solid 1px @article-bg;
+  margin-bottom: 25px;
+
+}
+
+.article-wrapper {
+  white-space: 230px;
+  float: left;
+  display: block;
+  height: 260px;
+}
+
+.homepage-article {
+  background: @article-bg;
+  padding: 10px;
+  width: 230px;
+  float: left;
+  margin-right: 25px;
+  max-height: 220px;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+
+  .featured-image {
+    width: 230px;
+    height: 140px;
+    overflow: hidden;
+  }
+
+  img {
+    transition: 1s all ease;
+    -webkit-transition: 1s all ease;
+    -moz-transition: 1s all ease;
+    -o-transition: 1s all ease;
+
+    &:hover {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+    }
+  }
+
+  h3.entry-title {
+    padding-top: 4px;
+    text-align: center;
+    border-top: solid 1px desaturate(@menu-link-color, 50%);
+    a {
+      font-family: Calibri, Arial, Helvetica, sans-serif;
+      color: @home-link;
+      text-decoration: none;
+      font-size: small;
+
+      &:hover {
+        color: white;
+        position: relative;
+      }
+    }
+    a[data-title]:hover:after {
+      content: attr(data-title);
+      padding: 4px 8px;
+      color: #eee;
+      position: absolute;
+      left: -8px;
+      top: -7px;
+      z-index: 20px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-box-shadow: 0px 0px 4px #222;
+      -webkit-box-shadow: 0px 0px 4px #222;
+      box-shadow: 0px 0px 4px #222;
+      background: black;
+      overflow: visible;
+      word-wrap: break-word;
+      width: 220px;
+      display: inline-block;
+    }
+  }
+}
+
+/*Articles, Pages and General Content Section Styling
+----------------------------------------------------------*/
+
+/* Floating Details of the Section, which determines the layout is present in the css/layouts folder */
+
+#primary, #secondary {
+  padding: 10px;
+  background: desaturate(@default-background, 5%);
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+/* Modification for Sidebar on Homepage */
+
+#primary-home {
+  overflow: auto;
+}
+/* Full width Template
+----------------------------------------------*/
+
+.full-width {
+  width: 100% !important;
+  padding: 10px;
+}
+/* Archive & Search Pages
+---------------------------------------- */
+
+.search, .archive {
+  .entry-title a {
+    font-size: x-large;
+    text-decoration: none;
+  }
+  article {
+    background: saturate(@default-background, 15%);
+    padding: 15px;
+  }
+  h1.entry-title {
+    font-size: x-large;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    display: block;
+    clear: both;
+    text-transform: none;
+    text-shadow: #fff 0px 0px 0px;
+    padding: 10px 0px;
+    word-wrap: break-word !important;
+    -ms-word-wrap: break-word;
+    &:first-letter {
+      font-size: x-large;
+      text-shadow: #fff 0px 0px 0px;
+    }
+    color: @article-bg;
+    box-shadow: 0px 0px 0px;
+    border-bottom: none;
+    margin-bottom: 0px;
+  }
+  .wp-post-image {
+    text-align: center;
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    border-bottom: solid 4px @link-color;
+    box-shadow: 0px -1px 9px #666;
+  }
+}
+.search .page-title {
+  font-size: x-large;
+  border-bottom: solid 1px black;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.archive, .search, .single {
+  #colophon {
+    margin-bottom: -22px;
+  }
+}
+.category {
+  .entry-title a {
+    font-size: normal;
+  }
+  article {
+    background: @article-bg;
+    padding: 10px;
+  }
+  h1.entry-title {
+    font-size: normal;
+    padding: 0px 0px;
+    &:first-letter {
+      font-size: 13px;
+      text-transform: none;
+    }
+  }
+  .wp-post-image {
+    max-width: 100%;
+    border-bottom: none;
+    box-shadow: none;
+  }
+}
+
+/* HTML Markup & Formatting */
+.single article, .page article {
+  h1 {
+    font-size: xx-large;
+  }
+  h2 {
+    font-size: x-large;
+  }
+  h3 {
+    font-size: large;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+
+  blockquote {
+    background: saturate( @default-background, 20% );
+    padding: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 1px;
+    border-bottom: solid 5px desaturate(@menu-bg, 30%);
+    font-family: Georgia, Times, serif;
+  }
+  table {
+    td, th {
+      padding: 5px;
+      background: saturate( @default-background, 10% );
+    }
+    th {
+      border-bottom: solid 3px @menu-bg;
+    }
+  }
+  ul ul {
+    list-style: circle;
+    ul {
+      list-style: disc;
+    }
+  }
+  ol {
+    ol {
+      list-style: lower-roman;
+      ol {
+        list-style-type: lower-alpha;
+      }
+    }
+  }
+}
+.full-width {
+  width: 98% !important;
+}
+
+/* Responsive Design Begins Below
+---------------------------------------------------*/
+@small-desktop: 960px;
+@ipad: 768px;
+@smartphone: 480px;
+@dumbphone: 280px;
+
+@media screen and (max-width: @large-desktop) and (min-width: @small-desktop) {
+
+  .container, #nav-wrapper {
+    width: (0.95*@small-desktop) !important;
+    //width: 300px !important;
+  }
+  #primary-home {
+    padding-left: 68px;
+  }
+  .home #secondary {
+    .widget {
+      margin-right: 2%;
+    }
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width: @small-desktop) and (min-width: @ipad) {
+  .container, #nav-wrapper {
+    width: (0.95*@ipad) !important;
+    //width: 300px !important;
+  }
+  #primary-home {
+    padding-left: 88px;
+  }
+
+  #footer-sidebar .footer-column {
+    width: 70%;
+    margin: auto;
+    float: none;
+  }
+  #primary {
+    width: 95%;
+    float: none;
+  }
+  #secondary {
+    width: 95% !important;
+    float: left !important;
+    margin: auto;
+  }
+
+}
+@media screen and (max-width: @ipad)  {
+  .container {
+    width: (0.95*@smartphone) !important;
+   // width: 300px !important;
+  }
+  .main-navigation {
+    top: 0px;
+  }
+  #primary {
+    width: 95%;
+    float: none;
+  }
+  #secondary {
+    width: 95%;
+    padding-left: 10px;
+    float: left !important;
+  }
+  .pagination {
+    margin-left: -50px;
+  }
+
+  .site-title a { font-size: x-large;}
+  .site-description { font-size: x-small; }
+
+
+  #primary-home {
+    padding-left: 88px;
+  }
+  .page-template-page-full-width-php, .home {
+    #secondary {
+      .widget {
+        width: (0.95*@smartphone);
+      }
+    }
+  }
+  #colophon {
+    #footertext {
+      float: left;
+    }
+  }
+  div.slide-title {
+    font-size: 18px;
+    display: block;
+  }
+  div.slide-description {
+    font-size: 12px;
+  }
+  #footer-sidebar .footer-column {
+    width: 100% !important;
+    text-align: left;
+
+    margin: 0px;
+  }
+  #footer-sidebar {
+   // padding-left: 50px;
+  }
+  // ++++++++++++++++++++++++++++ Reduce the Menu Here +++++++++++++++++++++++++++++++++++++++
+
+}
+@media screen and (max-width: @smartphone) {
+  .container {
+    //width: @dumbphone;
+    width: 300px !important;
+  }
+  #primary {
+    width: 95%;
+    float: none;
+    overflow-x: hidden;
+  }
+  #primary-home {
+    overflow-x: hidden;
+    padding-left: 0;
+  }
+  #slider-wrapper {
+    width: 95%;
+  }
+  #secondary {
+    width: 95%;
+    float: left;
+    .widget {
+      width: 95%;
+    }
+  }
+  .main-navigation {
+    margin-top: 30px;
+  }
+  .site-title a { font-size: x-large;}
+  .site-description { font-size: x-small; }
+
+  .page-template-page-full-width-php, .home {
+    #secondary {
+      .widget {
+        //width: (0.95*@dumbphone);
+        width: 300px !important;
+      }
+    }
+  }
+  #colophon {
+    #footertext {
+      float: left;
+    }
+  }
+  div.slide-title {
+    font-size: 12px;
+    display: block;
+  }
+  div.slide-description {
+    display: none;
+  }
+  .nivo-caption {
+    max-width: 320px;
+    min-width: 50px;
+  }
+
+  #footer-sidebar .footer-column {
+    width: 80%;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+@media screen and (max-width: @ipad) and (min-width: @smartphone) {
+  .container, #nav-wrapper {
+    // width: (0.95*@small-desktop) !important;
+    width: 450px !important;
+  }
+}
+/* Responsive Menu Bar
+-------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block;
+    padding: 10px;
+    color: @menu-link-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    top: -8px;
+  }
+  .menu-toggle:before {
+    content: url('/assets/images/menu.png');
+    height: 0;
+    width: 0px;
+    margin-right: 20px;
+    position: relative;
+    top: 10px;
+  }
+  #nav-wrapper {
+    width: 90%;
+    margin-bottom: 15px;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .main-navigation ul {
+    display: none
+  }
+  .main-navigation ul{
+    a {
+      padding: 5px;
+    }
+    li {
+      display: block;
+      width: 100%;
+      overflow: auto;
+      height: auto;
+    }
+    ul {
+      display: none;
+    }
+  }
+
+  #footer-sidebar .footer-column {
+    width: 96%;
+    margin: auto;
+  }
+}
+
+
+/* Basic Containers
+-------------------------------------------------*/
+body {
+  font-family: "Roboto", Arial;
+}
+.container {
+  width: @container;
+  margin: auto;
+}
+#page {
+  position: relative;
+  z-index: 999;
+  margin: auto;
+}
+#content {
+  background: fade(@default-background, 90%);
+  padding: 15px;
+  word-wrap: break-word;
+  -ms-word-wrap: break-word;
+}
+.blog #content {
+  padding-left: 30px;
+}
+
+@media screen and (max-width: @large-desktop) {
+  .blog #content {
+    padding-left: 15px !important;
+  }
+}
+/* Links
+------------------------------------------------- */
+a {
+  color: @link-color;
+}
+a:visited {
+}
+a:hover,
+a:focus,
+a:active {
+  color: desaturate(@link-color, 30%);
+}
+#masthead .site-branding {
+  #site-logo {
+    display: inline-block;
+    max-width: 150px;
+    max-height: 150px;
+    text-align: center;
+    padding: 20px 0px 30px 0px;
+    float: none;
+    @media screen and (max-width: 768px) {
+      float: none;
+    }
+  }
+}
+
+/* Single
+-------------------------------------------------------*/
+.single {
+  #content{
+    margin-top: 20px;
+  }
+}

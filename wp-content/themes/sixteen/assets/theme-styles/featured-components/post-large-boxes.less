@@ -1,0 +1,134 @@
+.grid {
+  @media screen and (max-width: 1100px) and (min-width: 768px) {
+    .sixteenth:nth-child(n+3) {
+      display:none;
+    }
+  }
+}
+figure.sixteenth {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  min-width: 220px;
+  max-width: 320px;
+  max-height: 220px;
+  @media screen and (max-width: 767px){
+    min-width: 260px;
+    max-width: 260px;
+  }
+  text-align: center;
+  @media screen and (max-width: @large-desktop) {
+    max-width: 415px;
+  }
+  @media screen and (max-width: @small-desktop) {
+    max-width: 323px !important;
+  }
+  @media screen and (min-width: 500px) and (max-width: @ipad) {
+    min-width: 414px !important;
+  }
+}
+figure.sixteenth * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.sixteenth img {
+  opacity: 1;
+  width: 100%;
+  @media screen and (max-width: 767px){
+    opacity: 0.5;
+  }
+  @media screen and (min-width: 767px) {
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+  }
+}
+figure.sixteenth:after {
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  opacity: 0.75;
+  -webkit-transform: skew(-45deg) scaleX(0);
+  transform: skew(-45deg) scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+figure.sixteenth figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  p {
+    font-size:15px;
+  }
+}
+figure.sixteenth h2,
+figure.sixteenth p {
+  margin: 0;
+  width: 100%;
+  @media screen and (min-width: 767px) {
+    opacity: 0;
+  }
+}
+figure.sixteenth h2 {
+  padding: 0 30px;
+  display: inline-block;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+figure.sixteenth p {
+  padding: 0 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+figure.sixteenth a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+@media screen and (min-width: 767px) {
+
+figure.sixteenth:hover:after,
+figure.sixteenth.hover:after {
+  -webkit-transform: skew(-45deg) scaleX(1);
+  transform: skew(-45deg) scaleX(1);
+  transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+figure.sixteenth:hover figcaption h2,
+figure.sixteenth.hover figcaption h2,
+figure.sixteenth:hover figcaption p,
+figure.sixteenth.hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+figure.sixteenth:hover figcaption h2,
+figure.sixteenth.hover figcaption h2 {
+  opacity: 1;
+}
+figure.sixteenth:hover figcaption p,
+figure.sixteenth.hover figcaption p {
+  opacity: 0.7;
+}
+}
+
+body {
+  background-color: #212121;
+}

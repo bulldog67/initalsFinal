@@ -1,0 +1,38 @@
+.single-post {
+
+  border-bottom: 1px dotted desaturate(@link-color, 30%);
+  padding-bottom: 20px;
+
+  h1.entry-title {
+
+    font-size: xx-large;
+    a {
+      text-decoration: none;
+    }
+  }
+  .featured-image-single {
+    width: 80%;
+    margin: auto;
+    clear: both;
+    margin-bottom: 15px;
+
+    img {
+      border: solid 10px saturate(@default-background, 15%);
+    }
+  }
+}
+.entry-meta {
+  font-size: 11px;
+  color: grey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  a {
+    color: desaturate(@link-color, 30%);
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+#nav-below {
+  background: lighten(@menu-bg, 70%);
+  padding: 10px;
+}
